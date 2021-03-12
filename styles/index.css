@@ -1,0 +1,178 @@
+:root {
+    --color-primary: #013d79;
+    --color-secondary: #ffc107;
+    --color-tertiary: #e7e7e7;
+    --color-success: #48bb78;
+    --color-error: #f56565;
+    --color-transparent: transparent;
+    --color-light-primary: #013d79a1;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@font-face {
+    font-family: QuicksandLight;
+    src: url("../public/fonts/Quicksand-Light.ttf");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: QuicksandRegular;
+    src: url("../public/fonts/Quicksand-Regular.ttf");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Quicksand;
+    src: url("../public/fonts/Quicksand-Medium.ttf");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: QuicksandSemiBold;
+    src: url("../public/fonts/Quicksand-SemiBold.ttf");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: QuicksandBold;
+    src: url("../public/fonts/Quicksand-Bold.ttf");
+    font-weight: 700;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 14px;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+}
+
+body {
+    background-color: var(--backgroundColor);
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-family: Quicksand;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey;
+    border-radius: 10px;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: #013d79;
+    border-radius: 10px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #013d79d3;
+}
+
+@tailwind base;
+
+/* Write your own custom base styles here */
+
+
+/* Start purging... */
+
+@tailwind components;
+
+/* Stop purging. */
+
+
+/* Write you own custom component styles here */
+
+@layer components {
+    .btn {
+        line-height: 0px;
+        border-radius: 10px;
+        border: none;
+    }
+    .btn-primary {
+        @apply btn;
+        background-color: #536DFE;
+        color: #fff;
+    }
+    /* 
+  .btn-primary::disabled: {
+    opacity: 0.4;
+    background-color: blue;
+  } */
+    .btn-secondary {
+        @apply btn;
+        background-color: #ffc107;
+        color: #013d79;
+    }
+    .btn-danger {
+        @apply bg-red-700 btn;
+        color: #fff;
+    }
+    .btn-transparent {
+        @apply btn;
+        background-color: transparent;
+        color: #fff;
+    }
+    .btn-tertiary {
+        @apply btn;
+        background-color: #e7e7e7;
+        color: #013d79;
+    }
+    /* @variants disabled {
+    .btn {
+      background-color: currentColor;
+      filter: brightness(90%);
+    }
+  } */
+}
+
+.radius-1 {
+    border-radius: 1rem 1rem 1rem 0px;
+}
+
+.radius-2 {
+    border-radius: 2rem 2rem 2rem 0px;
+}
+
+.radius-3 {
+    border-radius: 3rem 3rem 3rem 0px;
+}
+
+.radius-4 {
+    border-radius: 4rem 4rem 4rem 0px;
+}
+
+.line-7 {
+    line-height: 7rem;
+}
+
+
+/* Start purging... */
+
+@tailwind utilities;
+
+/* Stop purging. */
+
+
+/* Your own custom utilities */
